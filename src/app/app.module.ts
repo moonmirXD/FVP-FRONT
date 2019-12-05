@@ -17,7 +17,10 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
-import { MainNavComponent } from './views/admin/main-nav/main-nav.component';
+import { MainNavComponent } from "./views/admin/main-nav/main-nav.component";
+import { AuthGuard } from "./core/guard/auth.guard";
+import { AuthenticationService } from "./core/services/authentication.service";
+import { AdminapiService } from "./core/services/adminapi.service";
 
 @NgModule({
   declarations: [
@@ -43,7 +46,7 @@ import { MainNavComponent } from './views/admin/main-nav/main-nav.component';
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService, AdminapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

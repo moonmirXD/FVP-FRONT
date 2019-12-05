@@ -11,4 +11,8 @@ export class AuthenticationService {
   loginAdmin(user) {
     return this.http.post<any>(this.adminLoginUrl, user);
   }
+
+  loggedinAdmin() {
+    return !!localStorage.getItem("token");
+  }
 }
