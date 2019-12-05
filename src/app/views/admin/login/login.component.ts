@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthenticationService } from "src/app/core/services/authentication.service";
 import { FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -9,7 +10,8 @@ import { FormBuilder } from "@angular/forms";
 export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit() {}
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
       .loginAdmin(this.loginUserData.getRawValue())
       .subscribe(res => {
         console.log(res);
+        this.router.navigate(["/powercard-list"]);
       });
     console.log(this.loginUserData);
   }
