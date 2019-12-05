@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AuthenticationService {
+  private adminLoginUrl: string = "http://localhost:3000/users";
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  loginAdmin(user) {
+    return this.http.post<any>(this.adminLoginUrl, user);
+  }
 }
