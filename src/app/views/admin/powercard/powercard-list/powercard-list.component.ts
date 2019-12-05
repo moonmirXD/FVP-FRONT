@@ -1,13 +1,14 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
+import { NavbarService } from "src/app/core/services/navbar-service/navbar.service";
 @Component({
   selector: "app-powercard-list",
   templateUrl: "./powercard-list.component.html",
   styleUrls: ["./powercard-list.component.css"]
 })
 export class PowercardListComponent implements OnInit {
-  constructor() {}
+  constructor(public nav: NavbarService) {}
 
   displayedColumns: string[] = ["position", "name", "weight", "symbol"];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -15,6 +16,7 @@ export class PowercardListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
+    this.nav.show();
     this.dataSource.paginator = this.paginator;
   }
 }
