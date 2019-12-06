@@ -22,6 +22,7 @@ import { AuthGuard } from "./core/guard/auth.guard";
 import { AuthenticationService } from "./core/services/authentication.service";
 import { AdminapiService } from "./core/services/adminapi.service";
 import { TokenInterceptorService } from "./core/services/token-interceptor.service";
+import { AdminPostComponent } from './views/admin/admin-gallery/admin-post/admin-post.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TokenInterceptorService } from "./core/services/token-interceptor.servi
     PowercardListComponent,
     NavbarComponent,
     PowercardAddComponent,
-    MainNavComponent
+    MainNavComponent,
+    AdminPostComponent
   ],
   imports: [
     BrowserModule,
