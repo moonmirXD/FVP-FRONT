@@ -5,10 +5,14 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class AdminapiService {
-  private galleryFormURL = "http://localhost:4000/users";
+  private galleryFormPostURL = "http://localhost:4000/users";
+  private galleryFormListURL = "http://localhost:4000/users";
   constructor(private http: HttpClient) {}
 
   postGalleryForm(form) {
-    return this.http.post(this.galleryFormURL, form);
+    return this.http.post(this.galleryFormPostURL, form);
+  }
+  getGalleryForms() {
+    return this.http.get(this.galleryFormListURL);
   }
 }

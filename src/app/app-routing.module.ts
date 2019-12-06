@@ -5,6 +5,7 @@ import { PowercardListComponent } from "./views/admin/powercard/powercard-list/p
 import { PowercardAddComponent } from "./views/admin/powercard/powercard-add/powercard-add.component";
 import { AuthGuard } from "./core/guard/auth.guard";
 import { AdminPostComponent } from "./views/admin/admin-gallery/admin-post/admin-post.component";
+import { GalleryListComponent } from "./views/admin/admin-gallery/gallery-list/gallery-list.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -24,8 +25,13 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "admin-post",
+    path: "admin-post", // this is like gallery-post
     component: AdminPostComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "gallery-list",
+    component: GalleryListComponent,
     canActivate: [AuthGuard]
   }
 ];

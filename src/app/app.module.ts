@@ -23,6 +23,7 @@ import { AuthenticationService } from "./core/services/authentication.service";
 import { AdminapiService } from "./core/services/adminapi.service";
 import { TokenInterceptorService } from "./core/services/token-interceptor.service";
 import { AdminPostComponent } from './views/admin/admin-gallery/admin-post/admin-post.component';
+import { GalleryListComponent } from './views/admin/admin-gallery/gallery-list/gallery-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AdminPostComponent } from './views/admin/admin-gallery/admin-post/admin
     NavbarComponent,
     PowercardAddComponent,
     MainNavComponent,
-    AdminPostComponent
+    AdminPostComponent,
+    GalleryListComponent
   ],
   imports: [
     BrowserModule,

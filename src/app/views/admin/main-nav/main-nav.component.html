@@ -4,14 +4,18 @@
     class="sidenav"
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/powercard-add">Add Power Card</a>
-      <a mat-list-item routerLink="/admin-post">Admin Post</a>
       <a mat-list-item routerLink="/powercard-list">Power Card List</a>
+      <a mat-list-item routerLink="/powercard-list">Admin</a>
+      <ul>
+        <li><a mat-list-item routerLink="/admin-post">Gallery Post</a></li>
+        <li><a mat-list-item routerLink="/gallery-list">Gallery List</a></li>
+      </ul>
       <a
         mat-list-item
         href="#"
