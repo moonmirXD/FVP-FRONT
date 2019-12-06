@@ -13,26 +13,9 @@
         <td mat-cell *matCellDef="let element">{{ element.description }}</td>
       </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="uploadFile">
-        <th mat-header-cell *matHeaderCellDef>uploadFile</th>
-        <td mat-cell *matCellDef="let element">{{ element.uploadFile }}</td>
-      </ng-container>
-
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="contentType">
-        <th mat-header-cell *matHeaderCellDef>contentType</th>
-        <td mat-cell *matCellDef="let element">{{ element.contentType }}</td>
-      </ng-container>
-
       <ng-container matColumnDef="order">
         <th mat-header-cell *matHeaderCellDef>order</th>
         <td mat-cell *matCellDef="let element">{{ element.order }}</td>
-      </ng-container>
-
-      <ng-container matColumnDef="url">
-        <th mat-header-cell *matHeaderCellDef>url</th>
-        <td mat-cell *matCellDef="let element">{{ element.url }}</td>
       </ng-container>
 
       <ng-container matColumnDef="access">

@@ -22,6 +22,15 @@
       ></textarea>
     </div>
 
+    <!-- Progress Bar -->
+    <div class="progress form-group" *ngIf="progress > 0">
+      <div
+        class="progress-bar progress-bar-striped bg-success"
+        role="progressbar"
+        [style.width.%]="progress"
+      ></div>
+    </div>
+
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text">Upload</span>
@@ -31,8 +40,7 @@
           type="file"
           class="custom-file-input"
           id="inputGroupFile01"
-          name="uploadFile"
-          formControlName="uploadFile"
+          (change)="uploadFile($event)"
         />
         <label class="custom-file-label" for="inputGroupFile01"
           >Choose file</label

@@ -9,15 +9,7 @@ import { AdminapiService } from "src/app/core/services/adminapi.service";
   styleUrls: ["./gallery-list.component.css"]
 })
 export class GalleryListComponent implements OnInit {
-  displayedColumns: string[] = [
-    "postTitle",
-    "description",
-    "uploadFile",
-    "contentType",
-    "order",
-    "url",
-    "access"
-  ];
+  displayedColumns: string[] = ["postTitle", "description", "order", "access"];
   galleryData: any;
   dataSource = new MatTableDataSource<GalleryElement>(GALLERY_DATA);
 
