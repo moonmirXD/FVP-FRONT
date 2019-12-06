@@ -9,10 +9,14 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   {
     path: "powercard-list",
-    component: PowercardListComponent,
-    canActivate: [AuthGuard]
+    component: PowercardListComponent
+    // canActivate: [AuthGuard]
   },
-  { path: "powercard-add", component: PowercardAddComponent }
+  {
+    path: "powercard-add",
+    component: PowercardAddComponent
+    // canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({

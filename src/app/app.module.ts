@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./views/admin/login/login.component";
@@ -21,6 +21,7 @@ import { MainNavComponent } from "./views/admin/main-nav/main-nav.component";
 import { AuthGuard } from "./core/guard/auth.guard";
 import { AuthenticationService } from "./core/services/authentication.service";
 import { AdminapiService } from "./core/services/adminapi.service";
+import { TokenInterceptorService } from "./core/services/token-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,16 @@ import { AdminapiService } from "./core/services/adminapi.service";
     MatIconModule,
     MatListModule
   ],
-  providers: [AuthGuard, AuthenticationService, AdminapiService],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    AdminapiService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
