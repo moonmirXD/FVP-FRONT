@@ -9,9 +9,16 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/powercard-add" href="#">Add Power Card</a>
-      <a mat-list-item href="#">Input Details</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="/powercard-add">Add Power Card</a>
+      <a mat-list-item routerLink="/admin-post">Admin Post</a>
+      <a mat-list-item routerLink="/powercard-list">Power Card List</a>
+      <a
+        mat-list-item
+        href="#"
+        *ngIf="authentication.loggedinAdmin()"
+        (click)="authentication.logoutAdmin()"
+        >Logout</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

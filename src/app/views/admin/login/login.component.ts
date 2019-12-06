@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.nav.hide();
   }
   loginUserData = this.fb.group({
-    username: [""],
+    userName: [""],
     password: [""]
   });
 

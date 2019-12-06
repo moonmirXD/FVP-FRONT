@@ -9,13 +9,18 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   {
     path: "powercard-list",
-    component: PowercardListComponent
-    // canActivate: [AuthGuard]
+    component: PowercardListComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "",
+    component: LoginComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "powercard-add",
-    component: PowercardAddComponent
-    // canActivate: [AuthGuard]
+    component: PowercardAddComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
