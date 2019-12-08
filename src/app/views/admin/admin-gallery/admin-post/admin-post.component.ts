@@ -22,10 +22,7 @@ export class AdminPostComponent implements OnInit {
       postTitle: ["asdas", Validators.required],
       description: ["asdasd", Validators.required],
       uploadFile: ["", Validators.required],
-      contentType: ["asdasd", Validators.required],
-      order: ["R", Validators.required],
-      url: ["asdasd", Validators.required],
-      access: ["public", Validators.required]
+      url: ["asdasd", Validators.required]
     });
   }
   onSubmit() {
