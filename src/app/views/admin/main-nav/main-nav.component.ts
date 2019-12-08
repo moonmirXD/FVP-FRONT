@@ -20,7 +20,7 @@ export class MainNavComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private nav: NavbarService,
-    private authentication: AuthenticationService
+    public nav: NavbarService,
+    public authentication: AuthenticationService
   ) {}
 }
