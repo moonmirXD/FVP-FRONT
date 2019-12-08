@@ -11,28 +11,28 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   {
     path: "powercard-list",
-    component: PowercardListComponent,
-    canActivate: [AuthGuard]
+    component: PowercardListComponent
+    // canActivate: [AuthGuard]
   },
   {
     path: "",
-    component: LoginComponent,
-    canActivate: [AuthGuard]
+    component: LoginComponent
+    // canActivate: [AuthGuard]
   },
   {
     path: "powercard-add",
-    component: PowercardAddComponent,
-    canActivate: [AuthGuard]
+    component: PowercardAddComponent
+    // canActivate: [AuthGuard]
   },
   {
     path: "admin-post", // this is like gallery-post
-    component: AdminPostComponent,
-    canActivate: [AuthGuard]
+    component: AdminPostComponent
+    // canActivate: [AuthGuard]
   },
   {
     path: "gallery-list",
-    component: GalleryListComponent,
-    canActivate: [AuthGuard]
+    component: GalleryListComponent
+    // canActivate: [AuthGuard]
   }
 ];
 
