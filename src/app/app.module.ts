@@ -24,6 +24,7 @@ import { AdminapiService } from "./core/services/adminapi.service";
 import { TokenInterceptorService } from "./core/services/token-interceptor.service";
 import { AdminPostComponent } from './views/admin/admin-gallery/admin-post/admin-post.component';
 import { GalleryListComponent } from './views/admin/admin-gallery/gallery-list/gallery-list.component';
+import { GalleryViewComponent } from './views/admin/admin-gallery/gallery-view/gallery-view.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { GalleryListComponent } from './views/admin/admin-gallery/gallery-list/g
     PowercardAddComponent,
     MainNavComponent,
     AdminPostComponent,
-    GalleryListComponent
+    GalleryListComponent,
+    GalleryViewComponent
   ],
   imports: [
     BrowserModule,

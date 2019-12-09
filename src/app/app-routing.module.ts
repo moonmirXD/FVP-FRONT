@@ -6,6 +6,7 @@ import { PowercardAddComponent } from "./views/admin/powercard/powercard-add/pow
 import { AuthGuard } from "./core/guard/auth.guard";
 import { AdminPostComponent } from "./views/admin/admin-gallery/admin-post/admin-post.component";
 import { GalleryListComponent } from "./views/admin/admin-gallery/gallery-list/gallery-list.component";
+import { GalleryViewComponent } from "./views/admin/admin-gallery/gallery-view/gallery-view.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: "gallery-list",
     component: GalleryListComponent
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: "gallery/:id",
+    component: GalleryViewComponent
     // canActivate: [AuthGuard]
   }
 ];

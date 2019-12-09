@@ -5,8 +5,8 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class AdminapiService {
-  private galleryFormPostURL = "http://localhost:4000/users";
-  private galleryFormListURL = "http://localhost:4000/users";
+  private galleryFormPostURL = "http://localhost:3000/users";
+  private galleryFormListURL = "http://localhost:3000/users";
   constructor(private http: HttpClient) {}
 
   postGalleryForm(form) {
@@ -14,5 +14,8 @@ export class AdminapiService {
   }
   getGalleryForms() {
     return this.http.get(this.galleryFormListURL);
+  }
+  onUpload(form) {
+    return this.http.post(this.galleryFormPostURL, form);
   }
 }
